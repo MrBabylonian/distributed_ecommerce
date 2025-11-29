@@ -1,27 +1,25 @@
 {
-  "name": "distributed_ecommerce",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
-  },
-  "devDependencies": {
-    "prettier": "^3.6.2",
-    "turbo": "^2.6.1",
-    "typescript": "5.9.2"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@11.6.2",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "dependencies": {
-    "lucide-react": "^0.554.0"
-  }
+	"name": "distributed_ecommerce",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"check-types": "turbo run check-types"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.8",
+		"turbo": "^2.6.1",
+		"typescript": "5.9.2"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "npm@11.6.2",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"dependencies": {
+		"lucide-react": "^0.554.0"
+	}
 }
