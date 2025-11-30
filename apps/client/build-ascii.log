@@ -1,0 +1,33 @@
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   [1m[38;2;173;127;168m??? Next.js 16.0.5[39m[22m (Turbopack)
+   - Environments: .env
+
+ [33m[1m???[22m[39m The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+ [37m[1m [22m[39m Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ [32m[1m???[22m[39m Compiled successfully in 5.7s
+ [37m[1m [22m[39m Running TypeScript ...
+ [37m[1m [22m[39m Collecting page data using 7 workers ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ [37m[1m [22m[39m Generating static pages using 7 workers (0/8) ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ [31m[1m???[22m[39m useSearchParams() should be wrapped in a suspense boundary at page "/cart". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at S (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\apps\client\.next\server\chunks\ssr\node_modules_next_0e6c9c5b._.js:2:2111)
+    at p (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\apps\client\.next\server\chunks\ssr\node_modules_next_0e6c9c5b._.js:4:4847)
+    at C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\apps\client\.next\server\chunks\ssr\apps_client_src_app_cart_page_tsx_8d33c258._.js:20:154667
+    at ar (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:84366)
+    at aa (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:86185)
+    at as (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:107952)
+    at ao (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:105374)
+    at an (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:84718)
+    at aa (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:86234)
+    at aa (C:\Users\bedir\Desktop\Personal Development\TypeScript\NodeJS\distributed_ecommerce\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.prod.js:2:104714)
+Error occurred prerendering page "/cart". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /cart/page: /cart, exiting the build.
+ [31m[1m???[22m[39m Next.js build worker exited with code: 1 and signal: null

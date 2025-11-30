@@ -1,7 +1,6 @@
 import { Controller, Get, UseGuards } from "@nestjs/common";
 import { ClerkAuthGuard, ClerkUserId } from "@/libs/clerk-auth";
 import { AppService } from "./app.service";
-
 @Controller()
 export class AppController {
     constructor(private readonly appService: AppService) { }
@@ -18,7 +17,7 @@ export class AppController {
 
     @Get("/test")
     @UseGuards(ClerkAuthGuard)
-    getTest(@ClerkUserId() _userId: string): string {
-        return this.appService.getTest();
+    getTest(@ClerkUserId() userId: string | undefined) {
+        return this.appService.getTest(userId);
     }
 }

@@ -4,8 +4,7 @@ import { createParamDecorator, ExecutionContext } from "@nestjs/common";
 export const ClerkUserId = createParamDecorator(
     (_data: unknown, ctx: ExecutionContext): string | null => {
         const request = ctx.switchToHttp().getRequest();
-        const { userId } = getAuth(request);
-        return userId;
+        return request.auth?.sub || undefined;
     },
 );
 

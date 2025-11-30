@@ -18,7 +18,12 @@ export class AppService {
         };
     }
 
-    getTest(): string {
-        return "This is a protected route. You have been authenticated successfully!";
+    getTest(userId: string | undefined) {
+        if (!userId) {
+            return { message: "User ID not found in the request." };
+        } else if (userId) {
+            return { message: { userId } };
+        }
+        return { message: "Unexpected error occurred." };
     }
 }   
