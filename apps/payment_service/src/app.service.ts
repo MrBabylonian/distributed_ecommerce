@@ -17,4 +17,8 @@ export class AppService {
             })(),
         };
     }
+
+    testAuth(): string {
+        return "Authentication successful for Payment Service";
+    }
 }   

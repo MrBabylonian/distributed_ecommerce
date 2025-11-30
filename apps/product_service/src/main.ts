@@ -1,3 +1,5 @@
+import "dotenv/config";
+import { clerkPlugin } from "@clerk/fastify";
 import { NestFactory } from "@nestjs/core";
 import {
     FastifyAdapter,
@@ -9,8 +11,10 @@ async function bootstrap() {
     const app = await NestFactory.create<NestFastifyApplication>(
         AppModule,
         new FastifyAdapter({ logger: true }),
-        { abortOnError: false }
+        { abortOnError: false },
     );
-    await app.listen(process.env.PORT || 8000);
+    await app.register(clerkPlugin);
+    app.enableShutdownHooks();
+    await app.listen(process.env.PORT || 8000, "0.0.0.0");
 }
 bootstrap();

@@ -7,8 +7,9 @@
     "license": "UNLICENSED",
     "scripts": {
         "build": "npx nest build",
-        "dev": "npx nest start --watch",
-        "start": "npx nest start",
+        "dev": "tsx watch --include src/**/*.ts src/main.ts",
+        "dev:watch": "npx nest start --watch",
+        "start": "node dist/main",
         "start:dev": "npx nest start --watch",
         "start:debug": "npx nest start --debug --watch",
         "start:prod": "node dist/main",

@@ -17,4 +17,8 @@ export class AppService {
             })(),
         };
     }
+
+    getTest(): string {
+        return "This is a protected route. You have been authenticated successfully!";
+    }
 }   
