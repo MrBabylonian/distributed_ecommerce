@@ -1,5 +1,5 @@
-import { Injectable } from "@nestjs/common";
 
+import { Injectable } from "@nestjs/common";
 @Injectable()
 export class AppService {
     getHello(): string {
@@ -9,7 +9,7 @@ export class AppService {
     getHealth(): object {
         return {
             status: 200,
-            message: "Payment Service is running",
+            message: "Order Service is running",
             uptime: `${Math.floor(process.uptime()) / 60}  minutes`,
             timestamp: (() => {
                 const dateAndTime = new Date().toISOString().split("T");
@@ -17,4 +17,8 @@ export class AppService {
             })(),
         };
     }
-}   
+
+    testAuth() {
+        return "Auth test";
+    }
+};

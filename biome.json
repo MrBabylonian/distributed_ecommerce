@@ -18,10 +18,16 @@
             "recommended": true,
             "style": {
                 "useImportType": "off"
+            },
+            "correctness": {
+                "noUnusedImports": "error"
             }
         }
     },
     "javascript": {
+        "parser": {
+            "unsafeParameterDecoratorsEnabled": true
+        },
         "formatter": {
             "quoteStyle": "double"
         }

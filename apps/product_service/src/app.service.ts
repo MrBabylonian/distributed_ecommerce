@@ -9,7 +9,7 @@ export class AppService {
     getHealth(): object {
         return {
             status: 200,
-            message: "Payment Service is running",
+            message: "Product Service is running",
             uptime: `${Math.floor(process.uptime()) / 60}  minutes`,
             timestamp: (() => {
                 const dateAndTime = new Date().toISOString().split("T");
