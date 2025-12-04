@@ -5,6 +5,7 @@
     "author": "MrBabylonian",
     "private": true,
     "license": "UNLICENSED",
+    "type": "module",
     "scripts": {
         "build": "npx nest build",
         "dev": "npx nest start --watch",
@@ -17,7 +18,10 @@
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-        "test:e2e": "jest --config ./test/jest-e2e.json"
+        "test:e2e": "jest --config ./test/jest-e2e.json",
+        "check-types": "biome check",
+        "format": "biome format",
+        "lint": "biome lint"
     },
     "devDependencies": {
         "@repo/typescript-config": "*"

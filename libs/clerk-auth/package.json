@@ -1,6 +1,11 @@
 {
     "name": "@libs/clerk-auth",
     "version": "1.0.0",
-    "main": "src/index.ts",
-    "private": true
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "check-types": "biome check",
+        "format": "biome format",
+        "lint": "biome lint"
+    }
 }
