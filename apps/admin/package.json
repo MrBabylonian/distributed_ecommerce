@@ -1,16 +1,16 @@
 {
-    "name": "@app/admin",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbopack --port 3003",
-        "build": "next build",
-        "start": "next start",
-        "check-types": "biome check",
-        "format": "biome format",
-        "lint": "biome lint"
-    },
-    "devDependencies": {
-        "@repo/typescript-config": "*"
-    }
+	"name": "@app/admin",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack --port 3003",
+		"build": "next build",
+		"start": "next start",
+		"check-types": "tsc --noEmit",
+		"format": "biome format --write",
+		"lint": "biome lint"
+	},
+	"devDependencies": {
+		"@repo/typescript-config": "*"
+	}
 }

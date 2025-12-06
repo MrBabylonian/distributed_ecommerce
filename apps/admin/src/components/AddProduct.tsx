@@ -126,12 +126,15 @@ const AddProduct = () => {
 									name="shortDescription"
 									render={({ field }) => (
 										<FormItem>
-											<FormLabel>Short Description</FormLabel>
+											<FormLabel>
+												Short Description
+											</FormLabel>
 											<FormControl>
 												<Input {...field} />
 											</FormControl>
 											<FormDescription>
-												Enter the short description of the product.
+												Enter the short description of
+												the product.
 											</FormDescription>
 											<FormMessage />
 										</FormItem>
@@ -147,7 +150,8 @@ const AddProduct = () => {
 												<Textarea {...field} />
 											</FormControl>
 											<FormDescription>
-												Enter the description of the product.
+												Enter the description of the
+												product.
 											</FormDescription>
 											<FormMessage />
 										</FormItem>
@@ -160,7 +164,10 @@ const AddProduct = () => {
 										<FormItem>
 											<FormLabel>Price</FormLabel>
 											<FormControl>
-												<Input type="number" {...field} />
+												<Input
+													type="number"
+													{...field}
+												/>
 											</FormControl>
 											<FormDescription>
 												Enter the price of the product.
@@ -181,16 +188,22 @@ const AddProduct = () => {
 														<SelectValue placeholder="Select a category" />
 													</SelectTrigger>
 													<SelectContent>
-														{categories.map((cat) => (
-															<SelectItem key={cat} value={cat}>
-																{cat}
-															</SelectItem>
-														))}
+														{categories.map(
+															(cat) => (
+																<SelectItem
+																	key={cat}
+																	value={cat}
+																>
+																	{cat}
+																</SelectItem>
+															),
+														)}
 													</SelectContent>
 												</Select>
 											</FormControl>
 											<FormDescription>
-												Enter the category of the product.
+												Enter the category of the
+												product.
 											</FormDescription>
 											<FormMessage />
 										</FormItem>
@@ -205,22 +218,47 @@ const AddProduct = () => {
 											<FormControl>
 												<div className="grid grid-cols-3 gap-4 my-2">
 													{sizes.map((size) => (
-														<div className="flex items-center gap-2" key={size}>
+														<div
+															className="flex items-center gap-2"
+															key={size}
+														>
 															<Checkbox
 																id="size"
-																checked={field.value?.includes(size)}
-																onCheckedChange={(checked) => {
-																	const currentValues = field.value || [];
-																	if (checked) {
-																		field.onChange([...currentValues, size]);
+																checked={field.value?.includes(
+																	size,
+																)}
+																onCheckedChange={(
+																	checked,
+																) => {
+																	const currentValues =
+																		field.value ||
+																		[];
+																	if (
+																		checked
+																	) {
+																		field.onChange(
+																			[
+																				...currentValues,
+																				size,
+																			],
+																		);
 																	} else {
 																		field.onChange(
-																			currentValues.filter((v) => v !== size),
+																			currentValues.filter(
+																				(
+																					v,
+																				) =>
+																					v !==
+																					size,
+																			),
 																		);
 																	}
 																}}
 															/>
-															<label htmlFor="size" className="text-xs">
+															<label
+																htmlFor="size"
+																className="text-xs"
+															>
 																{size}
 															</label>
 														</div>
@@ -228,7 +266,8 @@ const AddProduct = () => {
 												</div>
 											</FormControl>
 											<FormDescription>
-												Select the available sizes for the product.
+												Select the available sizes for
+												the product.
 											</FormDescription>
 											<FormMessage />
 										</FormItem>
@@ -250,15 +289,32 @@ const AddProduct = () => {
 															>
 																<Checkbox
 																	id="color"
-																	checked={field.value?.includes(color)}
-																	onCheckedChange={(checked) => {
-																		const currentValues = field.value || [];
-																		if (checked) {
-																			field.onChange([...currentValues, color]);
+																	checked={field.value?.includes(
+																		color,
+																	)}
+																	onCheckedChange={(
+																		checked,
+																	) => {
+																		const currentValues =
+																			field.value ||
+																			[];
+																		if (
+																			checked
+																		) {
+																			field.onChange(
+																				[
+																					...currentValues,
+																					color,
+																				],
+																			);
 																		} else {
 																			field.onChange(
 																				currentValues.filter(
-																					(v) => v !== color,
+																					(
+																						v,
+																					) =>
+																						v !==
+																						color,
 																				),
 																			);
 																		}
@@ -270,39 +326,60 @@ const AddProduct = () => {
 																>
 																	<div
 																		className="w-2 h-2 rounded-full"
-																		style={{ backgroundColor: color }}
+																		style={{
+																			backgroundColor:
+																				color,
+																		}}
 																	/>
 																	{color}
 																</label>
 															</div>
 														))}
 													</div>
-													{field.value && field.value.length > 0 && (
-														<div className="mt-8 space-y-4">
-															<p className="text-sm font-medium">
-																Upload images for selected colors:
-															</p>
-															{field.value.map((color) => (
-																<div
-																	className="flex items-center gap-2"
-																	key={color}
-																>
-																	<div
-																		className="w-2 h-2 rounded-full"
-																		style={{ backgroundColor: color }}
-																	/>
-																	<span className="text-sm min-w-[60px]">
-																		{color}
-																	</span>
-																	<Input type="file" accept="image/*" />
-																</div>
-															))}
-														</div>
-													)}
+													{field.value &&
+														field.value.length >
+															0 && (
+															<div className="mt-8 space-y-4">
+																<p className="text-sm font-medium">
+																	Upload
+																	images for
+																	selected
+																	colors:
+																</p>
+																{field.value.map(
+																	(color) => (
+																		<div
+																			className="flex items-center gap-2"
+																			key={
+																				color
+																			}
+																		>
+																			<div
+																				className="w-2 h-2 rounded-full"
+																				style={{
+																					backgroundColor:
+																						color,
+																				}}
+																			/>
+																			<span className="text-sm min-w-[60px]">
+																				{
+																					color
+																				}
+																			</span>
+																			<Input
+																				type="file"
+																				accept="image/*"
+																			/>
+																		</div>
+																	),
+																)}
+															</div>
+														)}
 												</div>
 											</FormControl>
 											<FormDescription>
-												Select the available colors for the product.
+												Select the available colors for
+												the product.
 											</FormDescription>
 											<FormMessage />
 										</FormItem>

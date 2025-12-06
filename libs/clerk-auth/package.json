@@ -3,9 +3,15 @@
     "version": "1.0.0",
     "private": true,
     "type": "module",
+    "exports": {
+        "./*": "./src/*.ts"
+    },
     "scripts": {
-        "check-types": "biome check",
-        "format": "biome format",
+        "check-types": "tsc --noEmit",
+        "format": "biome format --write",
         "lint": "biome lint"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "*"
     }
 }

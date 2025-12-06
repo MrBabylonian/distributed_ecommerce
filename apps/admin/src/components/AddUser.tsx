@@ -59,7 +59,9 @@ const AddUser = () => {
 										<FormControl>
 											<Input {...field} />
 										</FormControl>
-										<FormDescription>Enter user full name.</FormDescription>
+										<FormDescription>
+											Enter user full name.
+										</FormDescription>
 										<FormMessage />
 									</FormItem>
 								)}
@@ -90,7 +92,8 @@ const AddUser = () => {
 											<Input {...field} />
 										</FormControl>
 										<FormDescription>
-											Only admin can see your phone number (optional)
+											Only admin can see your phone number
+											(optional)
 										</FormDescription>
 										<FormMessage />
 									</FormItem>

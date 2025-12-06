@@ -32,7 +32,9 @@ export const columns: ColumnDef<Product>[] = [
 		id: "select",
 		header: ({ table }) => (
 			<Checkbox
-				onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+				onCheckedChange={(value) =>
+					table.toggleAllPageRowsSelected(!!value)
+				}
 				checked={
 					table.getIsAllPageRowsSelected() ||
 					(table.getIsSomePageRowsSelected() && "indeterminate")
@@ -73,7 +75,9 @@ export const columns: ColumnDef<Product>[] = [
 			return (
 				<Button
 					variant="ghost"
-					onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+					onClick={() =>
+						column.toggleSorting(column.getIsSorted() === "asc")
+					}
 				>
 					Price
 					<ArrowUpDown className="ml-2 h-4 w-4" />
@@ -102,14 +106,18 @@ export const columns: ColumnDef<Product>[] = [
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuItem
 							onClick={() =>
-								navigator.clipboard.writeText(product.id.toString())
+								navigator.clipboard.writeText(
+									product.id.toString(),
+								)
 							}
 						>
 							Copy product ID
 						</DropdownMenuItem>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<Link href={`/products/${product.id}`}>View customer</Link>
+							<Link href={`/products/${product.id}`}>
+								View customer
+							</Link>
 						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>

@@ -55,9 +55,12 @@ const SingleUserPage = () => {
 									/>
 								</HoverCardTrigger>
 								<HoverCardContent>
-									<h1 className="font-bold mb-2">Verified User</h1>
+									<h1 className="font-bold mb-2">
+										Verified User
+									</h1>
 									<p className="text-sm text-muted-foreground">
-										This user has been verified by the admin.
+										This user has been verified by the
+										admin.
 									</p>
 								</HoverCardContent>
 							</HoverCard>
@@ -71,8 +74,8 @@ const SingleUserPage = () => {
 								<HoverCardContent>
 									<h1 className="font-bold mb-2">Admin</h1>
 									<p className="text-sm text-muted-foreground">
-										Admin users have access to all features and can manage
-										users.
+										Admin users have access to all features
+										and can manage users.
 									</p>
 								</HoverCardContent>
 							</HoverCard>
@@ -86,7 +89,8 @@ const SingleUserPage = () => {
 								<HoverCardContent>
 									<h1 className="font-bold mb-2">Awarded</h1>
 									<p className="text-sm text-muted-foreground">
-										This user has been awarded for their contributions.
+										This user has been awarded for their
+										contributions.
 									</p>
 								</HoverCardContent>
 							</HoverCard>
@@ -100,7 +104,8 @@ const SingleUserPage = () => {
 								<HoverCardContent>
 									<h1 className="font-bold mb-2">Popular</h1>
 									<p className="text-sm text-muted-foreground">
-										This user has been popular in the community.
+										This user has been popular in the
+										community.
 									</p>
 								</HoverCardContent>
 							</HoverCard>
@@ -116,16 +121,18 @@ const SingleUserPage = () => {
 							<h1 className="text-xl font-semibold">John Doe</h1>
 						</div>
 						<p className="text-sm text-muted-foreground">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-							voluptas distinctio ab ipsa commodi fugiat labore quos veritatis
-							cum corrupti sed repudiandae ipsum, harum recusandae ratione ipsam
-							in, quis quia.
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Vel voluptas distinctio ab ipsa commodi fugiat
+							labore quos veritatis cum corrupti sed repudiandae
+							ipsum, harum recusandae ratione ipsam in, quis quia.
 						</p>
 					</div>
 					{/* INFORMATION CONTAINER */}
 					<div className="bg-primary-foreground p-4 rounded-lg">
 						<div className="flex items-center justify-between">
-							<h1 className="text-xl font-semibold">User Information</h1>
+							<h1 className="text-xl font-semibold">
+								User Information
+							</h1>
 							<Sheet>
 								<SheetTrigger asChild>
 									<Button>Edit User</Button>

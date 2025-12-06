@@ -47,7 +47,10 @@ const AppLineChart = () => {
 					tickFormatter={(value) => value.slice(0, 3)}
 				/>
 				<YAxis tickLine={false} axisLine={false} tickMargin={8} />
-				<ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+				<ChartTooltip
+					cursor={false}
+					content={<ChartTooltipContent />}
+				/>
 				<Line
 					dataKey="desktop"
 					type="monotone"

@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { UserIdRequest } from "fastify";
+import { type UserId } from "@repo/types/auth";
 
 @Injectable()
 export class AppService {
@@ -19,7 +19,7 @@ export class AppService {
 		};
 	}
 
-	getTest(userId: UserIdRequest) {
+	getTest(userId: UserId) {
 		if (!userId) {
 			return { message: "User ID not found in the request." };
 		} else if (userId) {

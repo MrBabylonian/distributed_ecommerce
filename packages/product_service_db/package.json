@@ -1,16 +1,16 @@
 {
-    "name": "@repo/product_db",
-    "version": "1.0.0",
-    "description": "",
-    "author": "MrBabylonian",
-    "license": "ISC",
-    "type": "module",
-    "scripts": {
-        "db:generate": "prisma generate",
-        "db:migrate": "prisma migrate dev",
-        "db:deploy": "prisma migrate deploy",
-        "check-types": "biome check",
-        "format": "biome format",
-        "lint": "biome lint"
-    }
+	"name": "@repo/product_db",
+	"version": "1.0.0",
+	"description": "",
+	"author": "MrBabylonian",
+	"license": "ISC",
+	"type": "module",
+	"scripts": {
+		"db:generate": "prisma generate",
+		"db:migrate": "prisma migrate dev",
+		"db:deploy": "prisma migrate deploy",
+		"check-types": "tsc --noEmit",
+		"format": "biome format --write",
+		"lint": "biome lint"
+	}
 }

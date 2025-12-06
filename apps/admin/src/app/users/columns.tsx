@@ -29,7 +29,9 @@ export const columns: ColumnDef<User>[] = [
 		id: "select",
 		header: ({ table }) => (
 			<Checkbox
-				onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+				onCheckedChange={(value) =>
+					table.toggleAllPageRowsSelected(!!value)
+				}
 				checked={
 					table.getIsAllPageRowsSelected() ||
 					(table.getIsSomePageRowsSelected() && "indeterminate")
@@ -70,7 +72,9 @@ export const columns: ColumnDef<User>[] = [
 			return (
 				<Button
 					variant="ghost"
-					onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+					onClick={() =>
+						column.toggleSorting(column.getIsSorted() === "asc")
+					}
 				>
 					Email
 					<ArrowUpDown className="ml-2 h-4 w-4" />
@@ -113,13 +117,17 @@ export const columns: ColumnDef<User>[] = [
 					<DropdownMenuContent align="end">
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuItem
-							onClick={() => navigator.clipboard.writeText(user.id)}
+							onClick={() =>
+								navigator.clipboard.writeText(user.id)
+							}
 						>
 							Copy user ID
 						</DropdownMenuItem>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<Link href={`/users/${user.id}`}>View customer</Link>
+							<Link href={`/users/${user.id}`}>
+								View customer
+							</Link>
 						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
