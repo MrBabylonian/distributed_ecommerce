@@ -45,7 +45,9 @@ const AddCategory = () => {
 										<FormControl>
 											<Input {...field} />
 										</FormControl>
-										<FormDescription>Enter category name.</FormDescription>
+										<FormDescription>
+											Enter category name.
+										</FormDescription>
 										<FormMessage />
 									</FormItem>
 								)}

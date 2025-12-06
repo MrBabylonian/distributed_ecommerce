@@ -57,7 +57,9 @@ const ProductInteraction = ({
 					{product.sizes.map((size) => (
 						<div
 							className={`cursor-pointer border-1 p-[2px] ${
-								selectedSize === size ? "border-gray-600" : "border-gray-300"
+								selectedSize === size
+									? "border-gray-600"
+									: "border-gray-300"
 							}`}
 							key={size}
 							onClick={() => handleTypeChange("size", size)}
@@ -82,12 +84,17 @@ const ProductInteraction = ({
 					{product.colors.map((color) => (
 						<div
 							className={`cursor-pointer border-1 p-[2px] ${
-								selectedColor === color ? "border-gray-300" : "border-white"
+								selectedColor === color
+									? "border-gray-300"
+									: "border-white"
 							}`}
 							key={color}
 							onClick={() => handleTypeChange("color", color)}
 						>
-							<div className={`w-6 h-6`} style={{ backgroundColor: color }} />
+							<div
+								className={`w-6 h-6`}
+								style={{ backgroundColor: color }}
+							/>
 						</div>
 					))}
 				</div>

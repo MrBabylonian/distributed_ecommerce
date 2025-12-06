@@ -82,40 +82,35 @@ const latestTransactions = [
 		id: 1,
 		title: "Order Payment",
 		badge: "John Doe",
-		image:
-			"https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=800",
+		image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=800",
 		count: 1400,
 	},
 	{
 		id: 2,
 		title: "Order Payment",
 		badge: "Jane Smith",
-		image:
-			"https://images.pexels.com/photos/4969918/pexels-photo-4969918.jpeg?auto=compress&cs=tinysrgb&w=800",
+		image: "https://images.pexels.com/photos/4969918/pexels-photo-4969918.jpeg?auto=compress&cs=tinysrgb&w=800",
 		count: 2100,
 	},
 	{
 		id: 3,
 		title: "Order Payment",
 		badge: "Michael Johnson",
-		image:
-			"https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
+		image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
 		count: 1300,
 	},
 	{
 		id: 4,
 		title: "Order Payment",
 		badge: "Lily Adams",
-		image:
-			"https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=800",
+		image: "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=800",
 		count: 2500,
 	},
 	{
 		id: 5,
 		title: "Order Payment",
 		badge: "Sam Brown",
-		image:
-			"https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg?auto=compress&cs=tinysrgb&w=800",
+		image: "https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg?auto=compress&cs=tinysrgb&w=800",
 		count: 1400,
 	},
 ];
@@ -133,7 +128,9 @@ const CardList = ({ title }: { title: string }) => {
 							>
 								<div className="w-12 h-12 rounded-sm relative overflow-hidden">
 									<Image
-										src={Object.values(item.images)[0] || ""}
+										src={
+											Object.values(item.images)[0] || ""
+										}
 										alt={item.name}
 										fill
 										className="object-cover"
@@ -144,7 +141,9 @@ const CardList = ({ title }: { title: string }) => {
 										{item.name}
 									</CardTitle>
 								</CardContent>
-								<CardFooter className="p-0">${item.price}K</CardFooter>
+								<CardFooter className="p-0">
+									${item.price}K
+								</CardFooter>
 							</Card>
 						))
 					: latestTransactions.map((item) => (
@@ -164,9 +163,13 @@ const CardList = ({ title }: { title: string }) => {
 									<CardTitle className="text-sm font-medium">
 										{item.title}
 									</CardTitle>
-									<Badge variant="secondary">{item.badge}</Badge>
+									<Badge variant="secondary">
+										{item.badge}
+									</Badge>
 								</CardContent>
-								<CardFooter className="p-0">${item.count / 1000}K</CardFooter>
+								<CardFooter className="p-0">
+									${item.count / 1000}K
+								</CardFooter>
 							</Card>
 						))}
 			</div>

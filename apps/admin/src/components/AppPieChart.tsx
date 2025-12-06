@@ -45,7 +45,10 @@ const chartData = [
 
 const AppPieChart = () => {
 	// If you don't use React compiler use useMemo hook to improve performance
-	const totalVisitors = chartData.reduce((acc, curr) => acc + curr.visitors, 0);
+	const totalVisitors = chartData.reduce(
+		(acc, curr) => acc + curr.visitors,
+		0,
+	);
 
 	return (
 		<div className="">
@@ -68,7 +71,11 @@ const AppPieChart = () => {
 					>
 						<Label
 							content={({ viewBox }) => {
-								if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+								if (
+									viewBox &&
+									"cx" in viewBox &&
+									"cy" in viewBox
+								) {
 									return (
 										<text
 											x={viewBox.cx}

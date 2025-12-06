@@ -1,0 +1,17 @@
+{
+	"name": "@repo/types",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		"./*": "./src/*.ts"
+	},
+	"scripts": {
+		"check-types": "tsc --noEmit",
+		"lint": "biome lint",
+		"format": "biome format --write"
+	},
+	"devDependencies": {
+		"@repo/typescript-config": "*"
+	}
+}

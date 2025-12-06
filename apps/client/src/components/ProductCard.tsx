@@ -55,7 +55,9 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 			{/* PRODUCT DETAIL */}
 			<div className="flex flex-col gap-4 p-4">
 				<h1 className="font-medium">{product.name}</h1>
-				<p className="text-sm text-gray-500">{product.shortDescription}</p>
+				<p className="text-sm text-gray-500">
+					{product.shortDescription}
+				</p>
 				{/* PRODUCT TYPES */}
 				<div className="flex items-center gap-4 text-xs">
 					{/* SIZES */}
@@ -66,7 +68,10 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 							id="size"
 							className="ring ring-gray-300 rounded-md px-2 py-1"
 							onChange={(e) =>
-								handleProductType({ type: "size", value: e.target.value })
+								handleProductType({
+									type: "size",
+									value: e.target.value,
+								})
 							}
 						>
 							{product.sizes.map((size) => (
@@ -89,7 +94,10 @@ const ProductCard = ({ product }: { product: ProductType }) => {
 									} rounded-full p-[1.2px]`}
 									key={color}
 									onClick={() =>
-										handleProductType({ type: "color", value: color })
+										handleProductType({
+											type: "color",
+											value: color,
+										})
 									}
 								>
 									<div

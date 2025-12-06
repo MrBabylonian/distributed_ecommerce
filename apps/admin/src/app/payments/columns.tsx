@@ -29,7 +29,9 @@ export const columns: ColumnDef<Payment>[] = [
 		id: "select",
 		header: ({ table }) => (
 			<Checkbox
-				onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+				onCheckedChange={(value) =>
+					table.toggleAllPageRowsSelected(!!value)
+				}
 				checked={
 					table.getIsAllPageRowsSelected() ||
 					(table.getIsSomePageRowsSelected() && "indeterminate")
@@ -53,7 +55,9 @@ export const columns: ColumnDef<Payment>[] = [
 			return (
 				<Button
 					variant="ghost"
-					onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+					onClick={() =>
+						column.toggleSorting(column.getIsSorted() === "asc")
+					}
 				>
 					Email
 					<ArrowUpDown className="ml-2 h-4 w-4" />
@@ -110,15 +114,21 @@ export const columns: ColumnDef<Payment>[] = [
 					<DropdownMenuContent align="end">
 						<DropdownMenuLabel>Actions</DropdownMenuLabel>
 						<DropdownMenuItem
-							onClick={() => navigator.clipboard.writeText(payment.id)}
+							onClick={() =>
+								navigator.clipboard.writeText(payment.id)
+							}
 						>
 							Copy payment ID
 						</DropdownMenuItem>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<Link href={`/users/${payment.userId}`}>View customer</Link>
+							<Link href={`/users/${payment.userId}`}>
+								View customer
+							</Link>
 						</DropdownMenuItem>
-						<DropdownMenuItem>View payment details</DropdownMenuItem>
+						<DropdownMenuItem>
+							View payment details
+						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			);
